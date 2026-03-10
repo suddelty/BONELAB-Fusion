@@ -1,4 +1,4 @@
-﻿using Il2CppSLZ.Marrow.SceneStreaming;
+using Il2CppSLZ.Marrow.SceneStreaming;
 
 using LabFusion.Data;
 using LabFusion.Downloading.ModIO;
@@ -187,6 +187,9 @@ public static class MenuSettings
 
         generalGroup.AddElement<BoolElement>("Notify Downloads")
             .AsPref(ClientSettings.Downloading.NotifyDownloads);
+
+        generalGroup.AddElement<BoolElement>("Allow Mature Mods")
+            .AsPref(ClientSettings.Downloading.ShowMatureMods);
 
         generalGroup.AddElement<IntElement>("Max File Size (MB)")
             .AsPref(ClientSettings.Downloading.MaxFileSize)

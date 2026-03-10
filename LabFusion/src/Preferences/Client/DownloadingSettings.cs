@@ -1,4 +1,4 @@
-﻿using MelonLoader;
+using MelonLoader;
 
 namespace LabFusion.Preferences.Client;
 
@@ -15,6 +15,8 @@ public class DownloadingSettings
 
     public FusionPref<bool> NotifyDownloads { get; private set; }
 
+    public FusionPref<bool> ShowMatureMods { get; private set; }
+
     public FusionPref<int> MaxFileSize { get; private set; }
     public FusionPref<int> MaxLevelSize { get; private set; }
 
@@ -27,6 +29,8 @@ public class DownloadingSettings
         KeepDownloadedMods = new FusionPref<bool>(category, "Keep Downloaded Mods", false, PrefUpdateMode.IGNORE);
 
         NotifyDownloads = new FusionPref<bool>(category, "Notify Downloads", true, PrefUpdateMode.IGNORE);
+
+        ShowMatureMods = new FusionPref<bool>(category, "Allow Mature Mods", false, PrefUpdateMode.IGNORE);
 
         MaxFileSize = new FusionPref<int>(category, "Max File Size", DefaultMaxFileSize, PrefUpdateMode.IGNORE);
         MaxLevelSize = new FusionPref<int>(category, "Max Level Size", DefaultMaxLevelSize, PrefUpdateMode.IGNORE);

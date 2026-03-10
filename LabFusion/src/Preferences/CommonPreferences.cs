@@ -1,4 +1,4 @@
-﻿using LabFusion.Senders;
+using LabFusion.Senders;
 using LabFusion.Preferences.Client;
 using LabFusion.Network;
 
@@ -11,5 +11,5 @@ public static class CommonPreferences
     public static bool Knockout => LobbyInfoManager.LobbyInfo.Knockout;
     public static TimeScaleMode SlowMoMode => LobbyInfoManager.LobbyInfo.SlowMoMode;
 
-    public static readonly bool ShowMatureMods = false;
+    public static bool ShowMatureMods => ClientSettings.Downloading.ShowMatureMods.Value;
 }
